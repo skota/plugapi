@@ -10,15 +10,3 @@ config :plugapi, Plugapi.Repo,
       hostname: "localhost"
 
 config :plugapi, ecto_repos: [Plugapi.Repo]
-
-# config for guardian - ignore ..going to remove this...
-config :guardian, Guardian,
-      allowed_algos: ["HS512"], # optional
-      verify_module: Guardian.JWT,  # optional
-      issuer: "Plugapi",
-      ttl: { 30, :days },
-      allowed_drift: 2000,
-      verify_issuer: true, # optional
-      secret_key: 'superdupersecret123',
-      serializer: Plugapi.GuardianSerializer
-
