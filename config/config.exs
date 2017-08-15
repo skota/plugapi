@@ -4,9 +4,9 @@ use Mix.Config
       
 config :plugapi, Plugapi.Repo,
       adapter: Ecto.Adapters.MySQL,
-      database: "plugapi_repo",
-      username: "root",
-      password: "root",
-      hostname: "localhost"
+      database: System.get_env("DATABASE"),
+      username: System.get_env("USER"),
+      password: System.get_env("PASSWORD"),
+      hostname: System.get_env("HOST")
 
 config :plugapi, ecto_repos: [Plugapi.Repo]
