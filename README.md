@@ -1,7 +1,5 @@
 # Plugapi
 
-**TODO: Add description**
-
 ## About
 This is the accompanying code for the book "Build API's with Plug".
 
