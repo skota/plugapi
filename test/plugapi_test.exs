@@ -5,7 +5,7 @@ defmodule PlugapiTest do
   doctest Plugapi
 
   test "greets the world" do
-    assert Banditplugapi.hello() == :world
+    assert Plugapi.hello() == :world
   end
 
   # test /hi
@@ -20,7 +20,6 @@ defmodule PlugapiTest do
   # test /secret without api key
   test "user cannot access /secret without x-api-key" do
     conn = conn(:get, "/secret")
-
     conn = Router.call(conn, [])
 
     assert conn.state == :sent
